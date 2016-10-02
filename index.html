@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link href="ngDialog.min.css" rel="stylesheet">
+		<link href="ngDialog-theme-default.min.css" rel="stylesheet">
+		<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+		<script src="ngDialog.min.js"></script>
+		<script src="tool_2a.js"></script>
+		<link href="tool.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<section ng-app="toolApp" ng-controller="toolCtrl">
+			<nav>
+			  <div>
+				<input type="text" class="text" ng-model="before" placeholder="目標前字串"/>
+				<input type="text" class="text" ng-model="after" placeholder="目標前字串"/>
+			  </div>
+			  <div>
+				<span type="button" id="about" class="button" ng-click="openDialog()">介紹</span>
+			  </div>
+			</nav>
+			<article>
+			  <div>
+			    <label class="frame_label">Source</label>
+			  </div>
+			  <textarea id="src" ng-model="src"></textarea>
+			</article>
+			<article>
+				<div>
+					<label class="frame_label">Result</label>
+				</div>
+				<textarea id="result">{{run()}}</textarea>
+			</article>
+		</section>
+	</body>
+</html>
